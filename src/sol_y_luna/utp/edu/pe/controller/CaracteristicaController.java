@@ -4,7 +4,7 @@ package sol_y_luna.utp.edu.pe.controller;
 import java.util.List;
 import sol_y_luna.utp.edu.pe.model.dao.CaracteristicaDao;
 import sol_y_luna.utp.edu.pe.model.dto.CaracteristicaServicio;
-
+//COMENTARIO DE USUARIO2 XD
 
 public class CaracteristicaController {
 
