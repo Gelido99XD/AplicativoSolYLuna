@@ -11,9 +11,7 @@ import java.util.List;
 public class ClienteDao extends DataSource {
 
     public boolean registrarCliente(Cliente cliente) {
-        
         Connection con = getConexion();
-        
         String sql = "INSERT INTO cliente (tipoDocumento, nroDocumento, nombre, apellido, telefono, correo) VALUES (?, ?, ?, ?, ?, ?)";
         try ( PreparedStatement statement = con.prepareStatement(sql)) {
             statement.setInt(1, cliente.getTipoDocumento());
@@ -22,7 +20,6 @@ public class ClienteDao extends DataSource {
             statement.setString(4, cliente.getApellido());
             statement.setString(5, cliente.getTelefono());
             statement.setString(6, cliente.getCorreo());
-
             statement.executeUpdate();
             return true; 
         } catch (SQLException e) { 
@@ -33,7 +30,6 @@ public class ClienteDao extends DataSource {
     }
 
     public int actualizarClientePorID(Cliente cliente) {
-        
         Connection con = getConexion();
         String sql = "UPDATE Cliente SET tipoDocumento=?, nroDocumento=?, nombre=?, apellido=?, telefono=?, correo=? WHERE id=?";
         int resultado;

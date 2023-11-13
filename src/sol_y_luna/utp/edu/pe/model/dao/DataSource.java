@@ -13,13 +13,11 @@ public class DataSource {
         String contraseña = "Rzo22ca+-#.";
 
         try {
-            
             Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conexion = DriverManager.getConnection(jdbcUrl, usuario, contraseña);
 
             return conexion;
         } catch (ClassNotFoundException | SQLException e) {
-            
             System.out.println(e.getMessage());
             return null;
             
