@@ -4,7 +4,7 @@ package sol_y_luna.utp.edu.pe.controller;
 import java.util.List;
 import sol_y_luna.utp.edu.pe.model.dto.Cliente;
 import sol_y_luna.utp.edu.pe.model.dao.ClienteDao;
-
+//comentario de Usuario2 cliente
 
 public class ClienteController {
 
